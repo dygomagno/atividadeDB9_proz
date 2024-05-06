@@ -1,0 +1,13 @@
+
+
+
+DELIMITER //
+
+CREATE PROCEDURE RelatorioQuantidadeProdutosCompradosPorDia()
+BEGIN
+    SELECT data_compra, COUNT(*) AS quantidade_produtos
+    FROM vendas
+    GROUP BY data_compra;
+END //
+
+DELIMITER ;
